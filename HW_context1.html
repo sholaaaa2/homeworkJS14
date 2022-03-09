@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    let userOne = {
+      name:"Вася",
+      surname:"Пупкин",
+      age: 28,
+      user(){
+        console.log(`Привет! Я ${this.name} ${this.surname}`);
+      }
+    };
+    let userTwo = {
+      name: "Ольга",
+      surname:"Княгиня",
+      age: 35
+    }
+
+    userOne.user.call(userTwo)
+
+  </script>
+
+</body>
+</html>

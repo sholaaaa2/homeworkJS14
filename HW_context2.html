@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    // Не изменяет коренной массив
+    Array.prototype.multi = function (x) {
+      return this.map(i => i *= x);
+
+    };
+    // Изменяет коренной массив
+    Array.prototype.mult = function (x) {
+      this.forEach(function (item, i, arr) { arr[i] = item * x });
+      return this
+    };
+
+    let a = [1,2,3,4,5];
+    let b = a.mult(2)
+    console.log(b);
+
+  </script>
+
+</body>
+</html>

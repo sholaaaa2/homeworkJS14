@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    function randNum() {
+      let arr = [];
+
+      function getRandNum() {
+        let x = Math.floor(Math.random()*100 + 1);
+
+        if (arr.some(i => i === x)) {
+          return getRandNum()
+        }
+        else {
+          arr.push(x)
+          return x
+        }
+      };
+      return getRandNum
+    };
+
+    let rand = randNum();
+
+    for (let i = 0; i < 100; i++) {
+      console.log(rand());
+    }
+
+  </script>
+
+</body>
+</html>
